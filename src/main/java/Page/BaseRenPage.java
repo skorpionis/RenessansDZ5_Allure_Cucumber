@@ -17,11 +17,9 @@ import java.util.List;
 
 public class BaseRenPage {
     WebDriver driver = MyDriverClass.getDriver();
-
     public BaseRenPage() {
         PageFactory.initElements(driver, this);
     }
-
     @After
     public void Vihod(){
         MyDriverClass.ZavershenieDriver();
@@ -31,14 +29,10 @@ public class BaseRenPage {
         new WebDriverWait(driver, 20)
                 .until(ExpectedConditions.elementToBeClickable(element)).click();
     }
-
-
     public void ZapolneniePoley(WebElement element, String text) {
         ClickableElement(element);
         element.sendKeys(text);
     }
-
-
     public WebElement PoiskElementa(List<WebElement> arr, String s) {
         for (int i = 0; i < arr.size(); i++) {
             if (arr.get(i).getText().equalsIgnoreCase(s)) {

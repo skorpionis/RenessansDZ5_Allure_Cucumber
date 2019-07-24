@@ -31,10 +31,12 @@ public class ContributionsRenessansPage extends BaseRenPage {
     private WebElement itogTarifaShapka;
 
     public void ojidalkaNadpisiTarifaDr(){
-        new WebDriverWait(driver, 5).until(ExpectedConditions.textToBePresentInElement(itogTarifaShapka, "Без границ"));
+        new WebDriverWait(driver, 5).until(ExpectedConditions.
+                textToBePresentInElement(itogTarifaShapka, "Без границ"));
     }
     public void ojidalkaNadpisiTarifa(){
-        new WebDriverWait(driver, 5).until(ExpectedConditions.textToBePresentInElement(itogTarifaShapka, "Ренессанс Накопительный"));
+        new WebDriverWait(driver, 5).until(ExpectedConditions.
+                textToBePresentInElement(itogTarifaShapka, "Ренессанс Накопительный"));
     }
 
     public List<WebElement> getCurr() {
